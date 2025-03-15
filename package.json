@@ -64,10 +64,5 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1"
   },
-  "private": true,
-  "name": "toothmateapp-2022",
-  "version": "1.0.0",
-  "description": "### **Downloads:**   [Node.JS](https://nodejs.org/en/download)     [ngrok](https://ngrok.com/download)     [Visual Studio Code](https://code.visualstudio.com/download)",
-  "author": "",
-  "license": "ISC"
+  "private": true
 }
