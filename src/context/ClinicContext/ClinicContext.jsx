@@ -17,7 +17,6 @@ const ClinicReducer = (state, action) => {
 const getAllClinics = dispatch => {
   return async () => {
     const response = await axiosApi.get('/Clinics');
-
     dispatch({ type: 'get_all_clinics', payload: response.data });
   };
 };
