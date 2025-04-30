@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("./models/User");
 require("./models/Education");
 require("./models/Clinic");
@@ -22,8 +23,7 @@ app.use(appointmentRoutes);
 
 
 //MongoDB connection
-const mongoUri = "mongodb+srv://toothmate:PCPwhpXPkRbJwMSk@toothmate.quw6mp3.mongodb.net/toothmate?retryWrites=true&w=majority&appName=toothmate";
-
+const mongoUri = process.env.MONGO_URI;
 // Connect to MongoDB
 mongoose.connect(mongoUri)
     .then(() => {
