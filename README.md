@@ -1,4 +1,36 @@
-# ToothMate phone app
+**#2025 update version--This project consists of two parts: the frontend (ToothMateApp) and the backend (ToothMateServer).
+Ensure the following tools are installed:
+
+Node.js – for running the JavaScript environment
+
+ngrok – for exposing your local server to the internet
+
+Visual Studio Code – recommended code editor
+
+Expo Go – to run the React Native app on your Android/iOS device
+Steps:
+Open both the ToothMateApp and ToothMateServer folders in separate Visual Studio Code windows.
+
+In each project’s terminal, ensure you're in the correct root directory.
+
+Run the following command in each terminal:
+npm install
+1. Start the Backend Server
+   In the ToothMateServer directory, run:
+   npm run dev
+2. Run ngrok
+   In a new terminal window, run:
+   ngrok http 3000
+   Open the file ToothMateApp/src/api/axios.js and replace the baseURL with the new ngrok URL:
+   const baseURL = 'https://your-ngrok-url.ngrok.io'; // replace this with your ngrok URL
+3. Start the Frontend App
+   In the ToothMateApp directory, run:
+   npx expo start
+   This opens a browser window with a QR code.
+4. Run the App on Your Phone
+   Scan QR Code with camera and click the link.
+
+Make sure your phone and computer are on the same Wi-Fi network.# ToothMate phone app**
 
 ### **Downloads:**  
 [Node.JS](https://nodejs.org/en/download)    
