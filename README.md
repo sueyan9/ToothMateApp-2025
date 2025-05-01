@@ -13,10 +13,14 @@ In each project’s terminal, ensure you're in the correct root directory.
 Run the following command in each terminal: npm install
 
 Start the Backend Server In the ToothMateServer directory, run: npm run dev
-Run ngrok In a new terminal window, run: ngrok http 3000 Open the file ToothMateApp/src/api/axios.js and replace the baseURL with the new ngrok URL: const baseURL = 'https://your-ngrok-url.ngrok.io'; // replace this with your ngrok URL
+Run ngrok In a new terminal window, run: 
+ngrok http 3000 
+Open the file ToothMateApp/src/api/axios.js and replace the baseURL with the new ngrok URL:
+
+const baseURL = 'https://your-ngrok-url.ngrok.io'; // replace this with your ngrok URL
 Start the Frontend App In the ToothMateApp directory, run: npx expo start This opens a browser window with a QR code.
 Run the App on Your Phone Scan QR Code with camera and click the link.
-Make sure your phone and computer are on the same Wi-Fi network.# ToothMate phone app
+Make sure your phone and computer are on the same Wi-Fi network.
 
 # ToothMate phone app
 
