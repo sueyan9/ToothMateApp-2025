@@ -22,6 +22,14 @@ const RightUpperSecondPremolar = ({ ...props }) => {
   const group = useRef()
 
   const { nodes, materials } = useGLTF('/assets/Right_Upper_Second_Premolar.glb')
+  useEffect(() => {
+    // Color coding for different materials
+    if (materials['1']) materials['1'].color.set('lightgreen') // Healthy
+    if (materials['2']) materials['2'].color.set('red') // Cavity
+    if (materials['3']) materials['3'].color.set('orange') // Filling
+    if (materials['4']) materials['4'].color.set('gray') // Crown
+    // Repeat the above for other materials as necessary
+  }, [materials])
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -165,7 +173,28 @@ export const UpperRightSecondPremolar = () => {
           <RightUpperSecondPremolar />
         </Suspense>
       </Canvas>
+      <div style={{ padding: '1rem' }}>
+        <h3>Tooth Color Legend</h3>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li>
+            <span style={{ display: 'inline-block', width: 20, height: 20, backgroundColor: 'lightgreen', marginRight: 10 }} />
+            Healthy
+          </li>
+          <li>
+            <span style={{ display: 'inline-block', width: 20, height: 20, backgroundColor: 'red', marginRight: 10 }} />
+            Cavity
+          </li>
+          <li>
+            <span style={{ display: 'inline-block', width: 20, height: 20, backgroundColor: 'orange', marginRight: 10 }} />
+            Filling
+          </li>
+          <li>
+            <span style={{ display: 'inline-block', width: 20, height: 20, backgroundColor: 'gray', marginRight: 10 }} />
+            Crown
+          </li>
+        </ul>
       <div>Clicked on upper right second premolar</div>
+      </div>
     </>
   )
 }
