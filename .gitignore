@@ -9,6 +9,6 @@ npm-debug.*
 *.orig.*
 web-build/
 src/api/axios.js
-
+ToothMateBackend/.env
 # macOS
 .DS_Store
